@@ -1,3 +1,4 @@
+<?php echo base_url(); ?>
 <!DOCTYPE html>
 <html class="no-js">
     <head>
