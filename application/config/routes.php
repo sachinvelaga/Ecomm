@@ -41,6 +41,11 @@
 $route['default_controller'] = "welcome";
 $route['404_override'] = '';
 
+$route['catalogue'] = "home";
+$route['catalogue(:any)'] = "home";
+$route['search'] = "home";
+$route['search(:any)'] = "home";
+
 
 /* End of file routes.php */
 /* Location: ./application/config/routes.php */

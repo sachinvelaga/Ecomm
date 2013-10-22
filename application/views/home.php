@@ -1,4 +1,3 @@
-<?php echo base_url(); ?>
 <!DOCTYPE html>
 <html class="no-js">
     <head>
@@ -17,12 +16,18 @@
         <![endif]-->
     </head>
     <body>
-
-        <p>Hello world! This is HTML5 Boilerplate.</p>
-
-        <script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.1/jquery.min.js"></script>
-        <script>window.jQuery || document.write('<script src="js/vendor/jquery-1.10.1.min.js"><\/script>')</script>
-
-        <script src="js/main.js"></script>
+      
+      <header id="app-header">
+        <div class="app-wrap"></div>
+      </header>
+      <section id="app-content"> 
+        <div class="app-wrap">
+          
+        </div>
+      </section>
+      <footer id="app-footer">
+        <div class="app-wrap"></div>
+      </footer>
+      <script data-main="<?php echo base_url('resources/js/app/main'); ?>" src="<?php echo base_url('resources/js/vendor/require.js'); ?>"></script>
     </body>
 </html>
