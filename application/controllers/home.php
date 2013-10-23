@@ -7,6 +7,7 @@
 			parent::__construct();
 			$this->load->helper('url');
 		   $this->load->model('product_header_model','product_header');
+		   $this->load->model('product_sku_model','product_sku');
 		}
 
 		public function index()
@@ -17,6 +18,12 @@
     public function catalogue () {
       $p = $this->product_header->getSelectedCatalogues();
       echo json_encode($p);
+    }
+    public function product($sku_code){
+      
+     debugbreak();
+      $data = $this->product_sku->getProduct($sku_code);
+      echo json_encode($data);
     }
 	}
 

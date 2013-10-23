@@ -41,8 +41,9 @@
 $route['default_controller'] = "welcome";
 $route['404_override'] = '';
 
+
 $route['catalogue'] = "home";
-$route['catalogue(:any)'] = "home";
+$route['catalogue/(:any)'] = "home/product/$1";
 $route['search'] = "home";
 $route['search(:any)'] = "home";
 
