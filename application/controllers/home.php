@@ -16,12 +16,21 @@
 		}
 
     public function catalogue () {
-      $p = $this->product_header->getSelectedCatalogues();
-      echo json_encode($p);
+      $data = $this->product_header->getSelectedCatalogues();
+      echo json_encode($data);
     }
     public function product($sku_code){
       $data = $this->product_sku->getProduct($sku_code);
       echo json_encode($data);
+    }
+    public function search()
+    {
+      $query_string = isset($_REQUEST['query']) ? trim($_REQUEST['query']) : '';
+      if(!empty($query_string))
+      {
+           $data =   $this->product_header->getSelectedCatalogues($query_string);
+           echo json_encode($data);
+      }
     }
 	}
 
