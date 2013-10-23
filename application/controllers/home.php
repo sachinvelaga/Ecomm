@@ -13,7 +13,7 @@
 			$this->load->view('home.php');
 		}
 
-    public function catalogue () {
+    public function cataloguessss () {
       $a = array();
       $b = array();
       $a['GroupId'] = 'MV12UN0005';

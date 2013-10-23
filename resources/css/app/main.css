@@ -11,8 +11,9 @@ textarea {
 }
 
 body {
-    font-size: 1em;
-    line-height: 1.4;
+  font-size: 1em;
+  line-height: 1.4;
+  font-family: serif;
 }
 
 ::-moz-selection {
@@ -229,23 +230,32 @@ body {
 
 .app-wrap {
   width: 1000px;
-  margin: 0 auto
+  margin: 0 auto;
+  background: #F0F0F0;
 }
 
 #app-content {
   margin: 10px 0;
 }
 
+.catalogue-list {
+  padding: 20px 20px 0 0;
+}
+
 .product {
   float: left;
-  width: 250px;
-  padding: 10px;
+  width: 225px;
+  margin: 0 0 20px 20px;
   box-sizing: border-box;
+  background: #FFF;
+  border: 1px solid #C6C6C6;
 }
-.product:hover {
-  outline: 2px solid #FFD926
-}
+
 .product img {
-  width: 200px;
-  height: 150px;
+  width: 223px;
+  height: 340px;
+}
+
+.product .text-info {
+  margin: 10px 20px;
 }

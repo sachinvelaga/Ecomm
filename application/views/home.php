@@ -18,15 +18,15 @@
     <body>
       
       <header id="app-header">
-        <div class="app-wrap"></div>
+        <div class="app-wrap clearfix"></div>
       </header>
       <section id="app-content"> 
-        <div class="app-wrap">
+        <div class="app-wrap clearfix">
           
         </div>
       </section>
       <footer id="app-footer">
-        <div class="app-wrap"></div>
+        <div class="app-wrap clearfix"></div>
       </footer>
       <script data-main="<?php echo base_url('resources/js/app/main'); ?>" src="<?php echo base_url('resources/js/vendor/require.js'); ?>"></script>
     </body>
