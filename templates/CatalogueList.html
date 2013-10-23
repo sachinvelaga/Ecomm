@@ -7,8 +7,12 @@
         </a>
       </div>
       <div class="text-info">
-        <div class="title"><%= product.get('MovieTitle') %></div>
-        <div class="price"><%= product.get('Price') %></div>
+        <div class="title">
+          <a href="/catalogue/<%= product.get('ProductId')%>/">
+            <%= product.get('MovieTitle') %>
+          </a>
+        </div>
+        <div class="price">RS. <%= product.get('Price') %></div>
       </div>
     </article>
   <% }) %>

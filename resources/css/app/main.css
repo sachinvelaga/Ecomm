@@ -11,9 +11,9 @@ textarea {
 }
 
 body {
-  font-size: 1em;
-  line-height: 1.4;
-  font-family: serif;
+  font-size: 12px;
+  line-height: 14px;
+  font-family: sans-serif;
 }
 
 ::-moz-selection {
@@ -258,4 +258,23 @@ body {
 
 .product .text-info {
   margin: 10px 20px;
+}
+
+.product .title a {
+  font-size: 12px;
+  font-weight: bold;
+  height: 14px;
+  margin-bottom: 3px;
+  text-decoration: none;
+  color: #666;
+  display: inline-block;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  width: 100%;
+}
+.product .price {
+  color: #999;
+  font-weight: bold;
+  font-size: 12px;
 }
