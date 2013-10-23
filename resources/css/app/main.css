@@ -77,6 +77,24 @@ input:-moz-placeholder { color:#B3B5B8; }
 /* ==========================================================================
    Author's custom styles
    ========================================================================== */
+   /*product page*/
+   
+.main-product-wrapper{
+margin : 0px 20px;
+}
+.main-product-wrapper div.product-image{
+text-align:center;
+float:left;
+width:300px;
+}
+.main-product-wrapper div.product-description{
+float:left;
+width:600px;
+}
+.title , .store , .category, .price
+{
+padding: 5px 0px 5px 10px;
+}
 
 
 
