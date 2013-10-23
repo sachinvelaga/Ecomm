@@ -14,6 +14,7 @@ define([
       });
       this.model.url += '/' + this.model.get('ProductId');
       this.model.fetch();
+      this.model.on('change', this.render, this);
     },
 
     render: function () {
