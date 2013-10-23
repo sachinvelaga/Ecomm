@@ -20,8 +20,6 @@
       echo json_encode($p);
     }
     public function product($sku_code){
-      
-     debugbreak();
       $data = $this->product_sku->getProduct($sku_code);
       echo json_encode($data);
     }
