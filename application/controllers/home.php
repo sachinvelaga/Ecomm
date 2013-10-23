@@ -35,7 +35,7 @@
 		public function related()
 		{
 			$header_id =   isset($_REQUEST['id']) ? trim($_REQUEST['id']) : '';
-			$prod_id =   isset($_REQUEST['ProductId']) ? trim($_REQUEST['ProductId']) : '';
+			$prod_id =   isset($_REQUEST['productId']) ? trim($_REQUEST['productId']) : '';
 			$data = $this->product_sku->getRelatedProducts($header_id , $prod_id);
 			echo json_encode($data);
 		}
