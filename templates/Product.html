@@ -1,13 +1,16 @@
 <section class="main-wrapper">
-	<section class="main-product-wrapper">
+	<section class="main-product-wrapper clearfix">
 		<div class="product-image">
 		<img src="/resources/img/product.jpeg" alt="">
 		</div>
 		<div class="product-description">
-			<div class="title"><h1>Test</h1></div>
-			<div class="store"><h3>Test</h3></div>
-			<div class="category"><h3>Test</h3></div>
-			<div class="price"><h2>Test</h2></div>
+			<div class="title"><h1><%= product.get('MovieTitle')%></h1></div>
+			<div class="store"><h3><%= product.get('Store')%></h3></div>
+			<div class="category"><h3><%= product.get('SubCategory')%></h3></div>
+			<div class="price"><h2>RS. <%= product.get('Price')%></h2></div>
 		</div>
 	</section>
+  <section class="related-products">
+    
+  </section>
 </section>

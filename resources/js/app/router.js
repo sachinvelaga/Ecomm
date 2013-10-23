@@ -24,13 +24,13 @@ define([
     appRouter.on('route:showCatalogue', function () {
       console.log('catalogue');
       NS.V.catalogueView = new CatalogueView();
-      NS.V.headerView = new HeaderView();
+      NS.V.headerView = new HeaderView('');
     });
 
     appRouter.on('route:showProduct', function (id) {
       console.log('product');
       console.log(id);
-      NS.V.headerView = new HeaderView();
+      NS.V.headerView = new HeaderView('');
       NS.V.productView = new ProductView(id);
     });
 
@@ -38,9 +38,7 @@ define([
       console.log('search');
       console.log(query);
       var query = query.slice(6);
-      NS.V.headerView = new HeaderView({
-        query: query
-      });
+      NS.V.headerView = new HeaderView(query);
       NS.V.searchView = new searchView();
       NS.V.searchView.collection.fetch({
         data: {

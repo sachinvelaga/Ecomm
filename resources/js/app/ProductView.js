@@ -3,8 +3,9 @@ define([
   'underscore',
   'backbone',
   'ProductModel',
+  'RelatedView',
   'text!/templates/Product.html'
-], function ($, _, Backbone, ProductModel, productTemplate) {
+], function ($, _, Backbone, ProductModel, RelatedView, productTemplate) {
   var ProductView = Backbone.View.extend({
     el: $('#app-content .app-wrap'),
 
@@ -15,11 +16,16 @@ define([
       this.model.url += '/' + this.model.get('ProductId');
       this.model.fetch();
       this.model.on('change', this.render, this);
+      this.model.on('change', this.loadRelated, this);
     },
 
+    loadRelated: function () {
+      this.relatedView = new RelatedView(this.model);
+    },
+    
     render: function () {
       var compiledTemplate = _.template(productTemplate, {
-        products: this.model
+        product: this.model
       });
       this.$el.html(compiledTemplate);
     }

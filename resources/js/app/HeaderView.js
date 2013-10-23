@@ -11,8 +11,8 @@ define([
       'keyup .search-input': 'search'
     },
 
-    initialize: function () {
-      this.render();
+    initialize: function (query) {
+      this.render(query);
     },
 
     search: function (e) {
@@ -26,9 +26,9 @@ define([
       }
     },
 
-    render: function () {
+    render: function (query) {
       var compiledTemplate = _.template(headerTemplate, {
-        query: ''
+        query: query
       });
       this.$el.html(compiledTemplate);
     }
