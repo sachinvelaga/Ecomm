@@ -55,8 +55,25 @@ textarea {
     color: #000;
     padding: 0.2em 0;
 }
-
-
+.search-wrap {
+ padding-top :10px;
+ margin : 0px 20px
+}
+.search-input{
+padding: 10px 10px 10px 13px;
+border: 0 none;
+outline: 0 none;
+width: 445px;
+height: 15px;
+border-radius: 2px 0 0 2px;
+font-family:sans-serif;
+font-size:1.5em;
+}
+ /* all */
+::-webkit-input-placeholder { color:#B3B5B8; }
+::-moz-placeholder {  color:#B3B5B8; } /* firefox 19+ */
+:-ms-input-placeholder { color:#B3B5B8; } /* ie */
+input:-moz-placeholder { color:#B3B5B8; }
 /* ==========================================================================
    Author's custom styles
    ========================================================================== */
