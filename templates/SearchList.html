@@ -1,4 +1,7 @@
 <section class="catalogue-list clearfix">
+  <% if(products.length === 0) {%>
+    <%= '<p>No results found</p>' %>
+  <% } %>
   <% _.each(products, function (product) { %>
     <article class="product">
       <div class="image-info">
