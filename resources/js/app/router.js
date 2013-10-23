@@ -9,6 +9,7 @@ define([
   
   var AppRouter = Backbone.Router.extend({
     routes: {
+      '': 'showCatalogue',
       'catalogue': 'showCatalogue',
       'catalogue/:id': 'showProduct',
       'search?:query': 'search',
