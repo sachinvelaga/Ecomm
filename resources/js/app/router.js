@@ -4,8 +4,9 @@ define([
   'backbone',
   'catalogueView',
   'HeaderView',
-  'searchView'
-], function ($, _, Backbone, CatalogueView, HeaderView, searchView) {
+  'searchView',
+  'productView'
+], function ($, _, Backbone, CatalogueView, HeaderView, searchView, ProductView) {
   
   var AppRouter = Backbone.Router.extend({
     routes: {
@@ -29,6 +30,8 @@ define([
     appRouter.on('route:showProduct', function (id) {
       console.log('product');
       console.log(id);
+      NS.V.headerView = new HeaderView();
+      NS.V.productView = new ProductView(id);
     });
 
     appRouter.on('route:search', function (query) {
