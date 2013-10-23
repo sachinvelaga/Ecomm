@@ -48,6 +48,7 @@ $route['search'] = "home";
 
 $route['api/catalogue/(:any)'] = "home/product/$1";
 $route['api/catalogue'] = "home/catalogue";
+$route['api/related'] = "home/related";
 $route['api/search'] = "home/search";
 
 
