@@ -19,10 +19,6 @@
       
       <header id="app-header">
         <div class="app-wrap clearfix">
-          <div class="logo">My FlipKart</div>
-          <div class="search-wrap">
-            <input type="text" class="search-input">
-          </div>
         </div>
       </header>
       <section id="app-content"> 
@@ -33,6 +29,14 @@
       <footer id="app-footer">
         <div class="app-wrap clearfix"></div>
       </footer>
+      <script>
+        var NS = {
+          C: {},
+          V: {},
+          M: {},
+          R: null
+        };
+      </script>
       <script data-main="<?php echo base_url('resources/js/app/main'); ?>" src="<?php echo base_url('resources/js/vendor/require.js'); ?>"></script>
     </body>
 </html>

@@ -2,25 +2,27 @@ define([
   'jquery',
   'underscore',
   'backbone',
-  'catalogueView'
-], function ($, _, Backbone, CatalogueView) {
+  'catalogueView',
+  'HeaderView',
+  'searchView'
+], function ($, _, Backbone, CatalogueView, HeaderView, searchView) {
   
   var AppRouter = Backbone.Router.extend({
     routes: {
       'catalogue': 'showCatalogue',
       'catalogue/:id': 'showProduct',
-      'search/:query': 'search',
+      'search?:query': 'search',
       '*actions': 'defaultAction'
     }
   });
 
   var initialize = function () {
-    var appRouter = new AppRouter();
+    var appRouter = NS.R = new AppRouter();
 
     appRouter.on('route:showCatalogue', function () {
       console.log('catalogue');
-      var catalogueView = new CatalogueView();
-
+      NS.V.catalogueView = new CatalogueView();
+      NS.V.headerView = new HeaderView();
     });
 
     appRouter.on('route:showProduct', function (id) {
@@ -31,6 +33,16 @@ define([
     appRouter.on('route:search', function (query) {
       console.log('search');
       console.log(query);
+      var query = query.slice(6);
+      NS.V.headerView = new HeaderView({
+        query: query
+      });
+      NS.V.searchView = new searchView();
+      NS.V.searchView.collection.fetch({
+        data: {
+          query: query
+        }
+      });
     });
 
     appRouter.on('route:defaultAction', function(actions){
