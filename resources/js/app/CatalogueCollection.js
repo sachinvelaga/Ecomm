@@ -5,7 +5,7 @@ define([
 ], function (_, Backbone, ProductModel) {
 
   var CatalogueCollection = Backbone.Collection.extend({
-    url: '/home/catalogue',
+    url: 'api/catalogue',
     model: ProductModel
   });
 

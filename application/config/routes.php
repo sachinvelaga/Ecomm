@@ -43,9 +43,12 @@ $route['404_override'] = '';
 
 
 $route['catalogue'] = "home";
-$route['catalogue/(:any)'] = "home/product/$1";
-$route['search'] = "home";
+$route['catalogue/(:any)'] = "home";
 $route['search(:any)'] = "home";
+
+$route['api/catalogue/(:any)'] = "home/product/$1";
+$route['api/catalogue'] = "home/catalogue";
+$route['search(:any)'] = "home/search";
 
 
 /* End of file routes.php */
