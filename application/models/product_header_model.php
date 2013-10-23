@@ -38,7 +38,7 @@
 			$where = "b.header_code != ''";
 			if(!empty($query_string))
 			{
-			   $where.=" and b.name like '%".($query_string)."%'";
+				$where.=" and b.name like '%".($query_string)."%'";
 			}
 			$this->db->distinct("a.header_id");
 			$this->db->select("a.header_id AS id, b.header_code AS GroupId, a.sku_code AS ProductId, b.name AS MovieTitle, s.name AS Store, c.name AS SubCategory, a.price AS Price, a.shipping_duration AS ShippingDuration");
