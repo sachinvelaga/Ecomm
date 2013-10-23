@@ -1,57 +1,15 @@
 <section class="catalogue-list clearfix">
-  <article class="product">
-    <div class="image-info">
-      <a href="">
-        <img src="/resources/img/product.jpeg" alt="">
-      </a>
-    </div>
-    <div class="text-info">
-      <div class="title">Title</div>
-      <div class="price">Rs. 456</div>
-    </div>
-  </article>
-  <article class="product">
-    <div class="image-info">
-      <a href="">
-        <img src="/resources/img/product.jpeg" alt="">
-      </a>
-    </div>
-    <div class="text-info">
-      <div class="title">Title</div>
-      <div class="price">Rs. 456</div>
-    </div>
-  </article>
-  <article class="product">
-    <div class="image-info">
-      <a href="">
-        <img src="/resources/img/product.jpeg" alt="">
-      </a>
-    </div>
-    <div class="text-info">
-      <div class="title">Title</div>
-      <div class="price">Rs. 456</div>
-    </div>
-  </article>
-  <article class="product">
-    <div class="image-info">
-      <a href="">
-        <img src="/resources/img/product.jpeg" alt="">
-      </a>
-    </div>
-    <div class="text-info">
-      <div class="title">Title</div>
-      <div class="price">Rs. 456</div>
-    </div>
-  </article>
-  <article class="product">
-    <div class="image-info">
-      <a href="">
-        <img src="/resources/img/product.jpeg" alt="">
-      </a>
-    </div>
-    <div class="text-info">
-      <div class="title">Title</div>
-      <div class="price">Rs. 456</div>
-    </div>
-  </article>
+  <% _.each(products, function (product) { %>
+    <article class="product">
+      <div class="image-info">
+        <a href="/catalogue/<%= product.get('ProductId')%>/">
+          <img src="/resources/img/product.jpeg" alt="">
+        </a>
+      </div>
+      <div class="text-info">
+        <div class="title"><%= product.get('MovieTitle') %></div>
+        <div class="price"><%= product.get('Price') %></div>
+      </div>
+    </article>
+  <% }) %>
 </section>
