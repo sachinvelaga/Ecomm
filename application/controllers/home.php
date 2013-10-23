@@ -30,6 +30,8 @@
 			{
 				$data =   $this->product_header->getSelectedCatalogues($query_string);
 				echo json_encode($data);
+			} else{
+			 $this->catalogue();
 			}
 		}
 		public function related()
