@@ -6,6 +6,7 @@
 		{
 			parent::__construct();
 			$this->load->helper('url');
+		   $this->load->model('product_header_model','product_header');
 		}
 
 		public function index()
@@ -13,25 +14,9 @@
 			$this->load->view('home.php');
 		}
 
-    public function cataloguessss () {
-      $a = array();
-      $b = array();
-      $a['GroupId'] = 'MV12UN0005';
-      $a['ProductId'] = 'MV12UN0005-1';
-      $a['MovieTitle'] = 'District 9';
-      $a['Store'] = 'Movies';
-      $a['Categories'] = 'International Movies';
-      $a['Sub Category'] = 'Drama';
-      $a['Price'] = '689';
-      $a['Shipping Duration'] = '5';
-
-      $b = $a;
-      $b['ProductId'] = 'MV12UN0005-2';
-
-      $c = array();
-      array_push($c , $a);
-      array_push($c , $b);
-      echo json_encode($c);
+    public function catalogue () {
+      $p = $this->product_header->getSelectedCatalogues();
+      echo json_encode($p);
     }
 	}
 
